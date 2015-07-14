@@ -14,18 +14,18 @@ app.get('/chart',function(req,res){
  	res.render('index',{});
 });
 
+// fs.readFile(__dirname +'/chart/data/data.json', 'utf8', function (err, data) {
+//   if (err) throw err;
+//   obj = JSON.parse(data);
+//   app.get('/chart/data',function(req,res){
+//   	res.send(obj);
+//   })
+// });
 
+app.post('/charttype', function(req,res){
+  console.log(req.body);
+})
 
-fs.readFile(__dirname +'/chart/data/data.json', 'utf8', function (err, data) {
-  if (err) throw err;
-  obj = JSON.parse(data);
-  app.get('/chart/data',function(req,res){
-  	res.send(obj);
-  })
-});
-
-
-app.get('/pagephp', function(req, res){exec("php main.php", function (error, stdout, stderr) {res.send(stdout);});});
 var server = http.createServer(app).listen(port, function() {
-  console.log('Express server listening on port ' + port);
+  console.log('Express server listening on port ' + port);  
 });
