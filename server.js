@@ -18,7 +18,7 @@ app.get('/chart',function(req,res){
 //   if (err) throw err;
 //   obj = JSON.parse(data);
 //   app.get('/chart/data',function(req,res){
-//   	res.send(obj);
+//   	res.send(data);
 //   })
 // });
 
