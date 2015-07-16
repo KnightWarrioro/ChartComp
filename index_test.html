@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src='./chart/js/highcharts.js' ></script>
+	<script src='./chart/js/exporting.js' ></script>
+	<script src='./chart/js/highcharts-more.js' ></script>
+	<script src='./chart/js/drilldown.src.js' ></script>
+
+	<script src="https://fb.me/react-0.13.3.js"></script>
+	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+	<script type="text/jsx" src="charts.js" ></script>
+	
+    
+</head>
+<body>
+	<div id="container"></div>
+	<div id="container2"></div>
+	<script type="text/jsx">
+      React.render(
+        <Charts url={"http://dev.myntra.com:3000/chart/data/data_bubble.json"} type={"bubble"} name={"xyz"}/>,
+        document.getElementById('container')
+      );
+    </script>
+    <script type="text/jsx">
+      React.render(
+        <Charts url={"http://dev.myntra.com:3000/chart/data/data_bar.json"} type={"bar"} name={"xyz1"}/>,
+        document.getElementById('container2')
+      );
+    </script>
+
+</body>
+</html>

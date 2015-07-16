@@ -1,7 +1,7 @@
 var React = require('react');
 
 var AddnewComponent = require('./add-new');
-var SubContainer =  require('./container');
+var ChartSet =  require('./chartSet');
 var MainComponent = React.createClass({
 	getInitialState: function(){
 		return{
@@ -9,7 +9,7 @@ var MainComponent = React.createClass({
 		};
 	},
 	newItemAdded : function(urlData , type){ 
-			if(urlData !="" && type!="")
+			if(urlData !="")
 			{
 			    var newArray = this.state.dataStore.slice();    
 			    newArray.push({url:urlData ,type: type });   
@@ -22,7 +22,7 @@ var MainComponent = React.createClass({
 		return(
 			<div>
 				<AddnewComponent onNewItemAdded={this.newItemAdded} />
-				<SubContainer data={this.state.dataStore}/>
+				<ChartSet data={this.state.dataStore}/>
 			</div>
 
 		)

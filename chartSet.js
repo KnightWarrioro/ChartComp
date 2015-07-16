@@ -1,7 +1,7 @@
 var React = require('react');
-var Chart = require('./barchart');
+var Chart = require('./chart');
 
-var SubContainer = React.createClass({
+var ChartSet = React.createClass({
 	render : function()
 	{
         return (
@@ -16,4 +16,4 @@ var SubContainer = React.createClass({
 	    );
 	}
 });
-module.exports= SubContainer;
+module.exports= ChartSet;

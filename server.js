@@ -11,8 +11,9 @@ app.set('views', __dirname);
 app.set('view engine', 'jade');
 
 app.get('/chart',function(req,res){
- 	res.render('index',{});
+ 	res.render('index_test',{});
 });
+
 
 // fs.readFile(__dirname +'/chart/data/data.json', 'utf8', function (err, data) {
 //   if (err) throw err;
